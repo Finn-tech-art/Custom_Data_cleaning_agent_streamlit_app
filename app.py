@@ -10,6 +10,9 @@ from bs4 import BeautifulSoup
 from rapidfuzz import process, fuzz
 import os
 import io
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # Optional Groq client
 try:
@@ -56,7 +59,7 @@ st.markdown("""
 # CONFIGURATION (Same as your existing code)
 # -------------------------
 COMPANIES_HOUSE_KEY = os.getenv("COMPANIES_HOUSE_KEY") or "f47ac6ff-e38d-4a78-86b6-e8576d615ac3"
-GROQ_API_KEY = os.getenv("GROQ_API_KEY") or "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"
+GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 GROQ_MODEL = os.getenv("GROQ_MODEL") or "llama-3.3-70b-versatile"
 
 DELAY_MIN = 0.25
